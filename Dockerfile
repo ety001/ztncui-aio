@@ -88,4 +88,4 @@ EXPOSE 9993/udp
 WORKDIR /
 VOLUME ["/opt/key-networks/ztncui/etc"]
 VOLUME [ "/var/lib/zerotier-one" ]
-ENTRYPOINT [ "/usr/bin/supervisord" ]
+CMD [ "/usr/bin/supervisord", "-c", "/etc/supervisord.conf" ]
